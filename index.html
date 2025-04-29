@@ -106,71 +106,118 @@
         </div>
     </header>
 
-    <!-- Additional Banners -->
-    <div class="banner">
-        <div class="profile-picture">
-            <img src="santa-cruz-skateboards.png" alt="Santa Cruz Skateboards">
-        </div>
-        <div class="bio">Santa Cruz Skateboards</div>
-    </div>
+    <script>
+        // Matrix Effect Script
+        const canvas = document.getElementById("matrix");
+        const ctx = canvas.getContext("2d");
 
-    <div class="banner">
-        <div class="profile-picture">
-            <img src="independent-trucks-span.png" alt="Independent Trucks">
-        </div>
-        <div class="bio">Independent Truck Company</div>
-    </div>
+        // Resize canvas to cover the header
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
 
-    <div class="banner">
-        <div class="profile-picture">
-            <img src="OJ-Wheels-Logo_2.svg" alt="OJ Wheels">
-        </div>
-        <div class="bio">OJ Wheels</div>
-    </div>
+        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%".split("");
+        const fontSize = 16;
+        const columns = Math.floor(canvas.width / fontSize);
+        const drops = Array(columns).fill(0);
 
-    <div class="banner">
-        <div class="profile-picture">
-            <img src="Krux-Trucks-Logo_2.svg" alt="Krux Trucks">
-        </div>
-        <div class="bio">Krux Trucks</div>
-    </div>
+        function drawMatrix() {
+            ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    <div class="banner">
-        <div class="profile-picture">
-            <img src="mobgrip.png" alt="MOB Grip">
-        </div>
-        <div class="bio">MOB Grip</div>
-    </div>
+            ctx.fillStyle = "#0f0";
+            ctx.font = fontSize + "px monospace";
 
-    <div class="banner">
-        <div class="profile-picture">
-            <img src="Ricta-Wheels-Logo_2-2.svg" alt="Ricta Wheels">
-        </div>
-        <div class="bio">Ricta Wheels</div>
-    </div>
+            drops.forEach((y, x) => {
+                const text = chars[Math.floor(Math.random() * chars.length)];
+                ctx.fillText(text, x * fontSize, y * fontSize);
 
-    <div class="banner">
-        <div class="profile-picture">
-            <img src="Slime-Balls-Logo_2.svg" alt="Slime Balls">
-        </div>
-        <div class="bio">Slime Balls</div>
-    </div>
+                if (y * fontSize > canvas.height || Math.random() > 0.95) {
+                    drops[x] = 0;
+                }
+                drops[x]++;
+            });
+        }
 
-    <div class="banner">
-        <div class="profile-picture">
-            <img src="Bullet-Logo_2.svg" alt="Bullet">
-        </div>
-        <div class="bio">Bullet</div>
-    </div>
+        setInterval(drawMatrix, 50);
 
-    <div class="banner">
-        <div class="profile-picture">
-            <img src="norcal.png" alt="Nor Cal">
-        </div>
-        <div class="bio">Nor Cal</div>
-    </div>
+        window.addEventListener("resize", () => {
+            resizeCanvas();
+            drops.length = Math.floor(canvas.width / fontSize);
+            drops.fill(0);
+        });
+    </script>
+
+    <img src="nicholasdudek.jpeg" alt="Nicholas Mark Dudek" style="display:none;">
+ 
 </body>
-</html>
+    
+<div class="banner">
+    <div class="profile-picture">
+    <img src="santa-cruz-skateboards.png" alt="Santa Cruz Skateboards">
+    </div
+    <div class="bio">Santa Cruz Skateboards</div>
+
+<div class="banner">
+    <div class="profile-picture">
+    <img src="independent-trucks-span.png" alt="Santa Cruz Skateboards">
+    </div
+    <div class="bio">Independent Truck Company</div>   
+           
+<div class="banner">
+
+    <div class="profile-picture">
+
+    <img src= OJ-Wheels-Logo_2.svg alt="OJ Wheels">
+        </div
+        <div class="bio">OJ Wheels</div>
+
+<div class="banner">
+
+<div class="profile-picture">
+
+<img src=Krux-Trucks-Logo_2.svg alt="Creature Skateboards">
+    <div class="bio">Krux Trucks</div>
+
+    <div class="banner">
+
+        <div class="profile-picture">
+    
+        <img src= mobgrip.png 
 
 
+            
+                <img src="independent-trucks-span.png" alt="Inedependent Trucks">
+                <div class="bio">Mob Grip</div>            
 
+<img src= Ricta-Wheels-Logo_2-2.svg
+    autofit="true" alt="MOB Grip">
+</div
+<div class="bio">Ricta Wheels</div>
+
+
+<div class="profile-picture">
+
+<img src= Slime-Balls-Logo_2.svg
+    autofit="true" alt="MOB Grip">
+</div
+<div class="bio">Slime Balls</div>
+
+<div class="profile-picture">
+
+    <img src= Bullet-Logo_2.svg
+        autofit="true" alt="MOB Grip">
+    </div
+    <div class="bio">Bullet</div>
+
+<div class="profile-picture">
+
+        <img src= norcal.png
+            autofit="true" alt="MOB Grip">
+        </div
+        <div class="bio">Nor Cal</div>
+        
+    
+    
