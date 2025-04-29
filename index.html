@@ -15,6 +15,15 @@
             overflow-x: hidden;
         }
 
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Place the canvas behind other content */
+        }
+
         .banner {
             position: relative;
             z-index: 2;
@@ -89,34 +98,102 @@
     </style>
 </head>
 <body>
+    <!-- Matrix Effect -->
+    <canvas id="matrix"></canvas>
+
     <!-- Header Section -->
     <header>
-        <canvas id="matrix"></canvas>
         <div class="banner">
             <div class="profile-picture">
                 <img src="nicholasdudek.jpeg" alt="Nicholas Mark Dudek">
             </div>
             <div class="bio">
-                <h1>Nicholas Mark Dudek</h1>
+                <h1>Nicholas M. Dudek</h1>
                 <p>Certified Software Engineer | Finance Professional</p>
                 <p>Email: <a href="mailto:Nicholas.M.Dudek@gmail.com">Nicholas.M.Dudek@gmail.com</a></p>
                 <p>LinkedIn: <a href="https://www.linkedin.com/in/nicholasdudek1/" target="_blank">Nicholas Mark Dudek</a></p>
-                <p>GitHub: <a href="https://github.com/nicholasdudek/Nicholas-Dudek/" target="_blank">Nicholas Mark Dudek</a></p>
+                <p>GitHub: <a href="https://nicholasdudek.github.io/Nicholas-Dudek/" target="_blank">Nicholas Mark Dudek</a></p>
             </div>
         </div>
     </header>
+
+    <!-- Additional Banners -->
+    <div class="banner">
+        <div class="profile-picture">
+            <img src="santa-cruz-skateboards.png" alt="Santa Cruz Skateboards">
+        </div>
+        <div class="bio">Santa Cruz Skateboards</div>
+    </div>
+
+    <div class="banner">
+        <div class="profile-picture">
+            <img src="independent-trucks-span.png" alt="Independent Trucks">
+        </div>
+        <div class="bio">Independent Truck Company</div>
+    </div>
+
+    <div class="banner">
+        <div class="profile-picture">
+            <img src="OJ-Wheels-Logo_2.svg" alt="OJ Wheels">
+        </div>
+        <div class="bio">OJ Wheels</div>
+    </div>
+
+    <div class="banner">
+        <div class="profile-picture">
+            <img src="Krux-Trucks-Logo_2.svg" alt="Krux Trucks">
+        </div>
+        <div class="bio">Krux Trucks</div>
+    </div>
+
+    <div class="banner">
+        <div class="profile-picture">
+            <img src="mobgrip.png" alt="MOB Grip">
+        </div>
+        <div class="bio">MOB Grip</div>
+    </div>
+
+    <div class="banner">
+        <div class="profile-picture">
+            <img src="Ricta-Wheels-Logo_2-2.svg" alt="Ricta Wheels">
+        </div>
+        <div class="bio">Ricta Wheels</div>
+    </div>
+    <div class="banner">
+        <div class="profile-picture">
+            <img src="Creature-Logo_2.svg" alt="Ricta Wheels">
+        </div>
+        <div class="bio">Creature Skateboards</div>
+    </div>
+    <div class="banner">
+        <div class="profile-picture">
+            <img src="Slime-Balls-Logo_2.svg" alt="Slime Balls">
+        </div>
+        <div class="bio">Slime Balls</div>
+    </div>
+
+    <div class="banner">
+        <div class="profile-picture">
+            <img src="Bullet-Logo_2.svg" alt="Bullet">
+        </div>
+        <div class="bio">Bullet</div>
+    </div>
+
+    <div class="banner">
+        <div class="profile-picture">
+            <img src="norcal.png" alt="Nor Cal">
+        </div>
+        <div class="bio">Nor Cal</div>
+    </div>
 
     <script>
         // Matrix Effect Script
         const canvas = document.getElementById("matrix");
         const ctx = canvas.getContext("2d");
 
-        // Resize canvas to cover the header
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-        resizeCanvas();
+        // Resize canvas to fit the screen
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
 
         const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%".split("");
         const fontSize = 16;
@@ -143,76 +220,16 @@
 
         setInterval(drawMatrix, 50);
 
+        // Adjust canvas size on window resize
         window.addEventListener("resize", () => {
-            resizeCanvas();
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
             drops.length = Math.floor(canvas.width / fontSize);
             drops.fill(0);
         });
     </script>
-
-    <img src="nicholasdudek.jpeg" alt="Nicholas Mark Dudek" style="display:none;">
- 
 </body>
-    
-<div class="banner">
-    <div class="profile-picture">
-        <img src="santa-cruz-skateboards.png" alt="Santa Cruz Skateboards">
-    </div>
-    <div class="bio">Santa Cruz Skateboards</div>
-</div>
+</html>
 
-<div class="banner">
-    <div class="profile-picture">
-        <img src="independent-trucks-span.png" alt="Independent Trucks">
-    </div>
-    <div class="bio">Independent Truck Company</div>
-</div>
 
-<div class="banner">
-    <div class="profile-picture">
-        <img src="OJ-Wheels-Logo_2.svg" alt="OJ Wheels">
-    </div>
-    <div class="bio">OJ Wheels</div>
-</div>
 
-<div class="banner">
-    <div class="profile-picture">
-        <img src="Krux-Trucks-Logo_2.svg" alt="Krux Trucks">
-    </div>
-    <div class="bio">Krux Trucks</div>
-</div>
-
-<div class="banner">
-    <div class="profile-picture">
-        <img src="mobgrip.png" alt="MOB Grip">
-    </div>
-    <div class="bio">MOB Grip</div>
-</div>
-
-<div class="banner">
-    <div class="profile-picture">
-        <img src="Ricta-Wheels-Logo_2-2.svg" alt="Ricta Wheels">
-    </div>
-    <div class="bio">Ricta Wheels</div>
-</div>
-
-<div class="banner">
-    <div class="profile-picture">
-        <img src="Slime-Balls-Logo_2.svg" alt="Slime Balls">
-    </div>
-    <div class="bio">Slime Balls</div>
-</div>
-
-<div class="banner">
-    <div class="profile-picture">
-        <img src="Bullet-Logo_2.svg" alt="Bullet">
-    </div>
-    <div class="bio">Bullet</div>
-</div>
-
-<div class="banner">
-    <div class="profile-picture">
-        <img src="norcal.png" alt="Nor Cal">
-    </div>
-    <div class="bio">Nor Cal</div>
-</div>
