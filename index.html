@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicholas M. Dudek</title>
+    <title>NHS Skate DIRECT</title>
     <style>
         /* General Styles */
         body {
@@ -105,113 +105,121 @@
     <header>
         <div class="banner">
             <div class="profile-picture">
-                <img src="nicholasdudek.jpeg" alt="Nicholas Mark Dudek">
+                <a href="https://nhsskatedirect.com" target="_blank" id="toggle-button">
+                    <img src="Nhs-Skate-Direct-Logo.svg" alt="nhs skate buy direct" style="background-color: #fff;">
+                </a>
             </div>
-            <div class="bio">
-                <h1>Nicholas M. Dudek</h1>
-                <p>Certified Software Engineer | Finance Analyst</p>
-                <p>Email: <a href="mailto:Nicholas.M.Dudek@gmail.com">Nicholas.M.Dudek@gmail.com</a></p>
-                <style> Bold 
-                    .bio p {
-                        font-weight: bold;
-                    }
-            
-                
-            
-                    .bio a {
-                        font-weight: bold;
-                    }
-                    .bio h1 {
-                        font-weight: bold;
-                    }
-                </style>
         </div>
     </header>
 
-    <!-- Additional Banners -->
-    <div class="banner">
-        <div class="profile-picture">
-            <a href="https://www.santacruzskateboards.com" target="_blank">
-            <img src="santa-cruz-skateboards.png" alt="Santa Cruz Skateboards">
-            </a>
+    <!-- Items to toggle -->
+    <div id="toggle-content">
+        <div class="banner">
+            <div class="profile-picture">
+                <a href="https://www.santacruzskateboards.com" target="_blank">
+                    <img src="santa-cruz-skateboards.png" alt="Santa Cruz Skateboards">
+                </a>
+            </div>
+            <div class="bio">Santa Cruz Skateboards</div>
         </div>
-        <div class="bio">Santa Cruz Skateboards</div>
+
+        <div class="banner">
+            <div class="profile-picture">
+                <a href="https://www.independenttrucks.com" target="_blank">
+                    <img src="independent-trucks-span.png" alt="Independent Trucks">
+                </a>
+            </div>
+            <div class="bio">Independent Truck Company</div>
+        </div>
+
+        <div class="banner">
+            <div class="profile-picture">
+                <a href="https://www.ojwheels.com" target="_blank">
+                    <img src="OJ-Wheels-Logo_2.svg" alt="OJ Wheels">
+                </a>
+            </div>
+            <div class="bio">OJ Wheels</div>
+        </div>
+
+        <div class="banner">
+            <div class="profile-picture">
+                <a href="https://www.kruxtrucks.com" target="_blank">
+                    <img src="Krux-Trucks-Logo_2.svg" alt="Krux Trucks">
+                </a>
+            </div>
+            <div class="bio">Krux Trucks</div>
+        </div>
+
+        <div class="banner">
+            <div class="profile-picture">
+                <a href="https://www.mobgriptape.com" target="_blank">
+                    <img src="mobgrip.png" alt="MOB Grip">
+                </a>
+            </div>
+            <div class="bio">MOB Grip</div>
+        </div>
+
+        <div class="banner">
+            <div class="profile-picture">
+                <a href="https://www.rictawheels.com" target="_blank">
+                <img src="Ricta-Wheels-Logo_2-2.svg" alt="Ricta Wheels">
+                </a>
+            </div>
+            <div class="bio">Ricta Wheels</div>
+        </div>
+        <div class="banner">
+            <div class="profile-picture">
+                <a href="https://www.creatureskateboards.com" target="_blank">
+                    <img src="Creature-Logo_2.svg" alt="Creature Skateboards">
+                </a>
+            </div>
+            <div class="bio">Creature Skateboards</div>
+        </div>
+        <div class="banner">
+            <div class="profile-picture">
+                <a href="https://www.slimeballwheels.com" target="_blank">
+                <img src="Slime-Balls-Logo_2.svg" alt="Slime Balls">
+                </a>
+            </div>
+            <div class="bio">Slime Balls</div>
+        </div>
+
+        <div class="banner">
+            <div class="profile-picture">
+                <a href="https://nhsskatedirect.com/pages/bullet" target="_blank">
+                <img src="Bullet-Logo_2.svg" alt="Bullet">
+                </a>
+            </div>
+            <div class="bio">Bullet</div>
+        </div>
+
+        <div class="banner">
+            <div class="profile-picture">
+                <a href="https://nhsskatedirect.com/pages/nor-cal" target="_blank">
+                    <img src="norcal.png" alt="Nor Cal">
+                </a>
+            </div>
+            <div class="bio">Nor Cal</div>
+        </div>
     </div>
 
-    <div class="banner">
-        <div class="profile-picture">
-            <a href="https://www.independenttrucks.com" target="_blank">
-                <img src="independent-trucks-span.png" alt="Independent Trucks">
-            </a>
-        </div>
-        <div class="bio">Independent Truck Company</div>
-    </div>
+    <script>
+        // JavaScript to toggle visibility
+        const toggleButton = document.getElementById('toggle-button');
+        const toggleContent = document.getElementById('toggle-content');
 
-    <div class="banner">
-        <div class="profile-picture">
-            <a href="https://www.ojwheels.com" target="_blank">
-                <img src="OJ-Wheels-Logo_2.svg" alt="OJ Wheels">
-            </a>
-        </div>
-        <div class="bio">OJ Wheels</div>
-    </div>
+        // Initially hide the content
+        toggleContent.style.display = 'none';
 
-    <div class="banner">
-        <div class="profile-picture">
-            <a href="https://www.kruxtrucks.com" target="_blank">
-                <img src="Krux-Trucks-Logo_2.svg" alt="Krux Trucks">
-            </a>
-        </div>
-        <div class="bio">Krux Trucks</div>
-    </div>
-
-    <div class="banner">
-        <div class="profile-picture">
-            <a href="https://www.mobgriptape.com" target="_blank">
-                <img src="mobgrip.png" alt="MOB Grip">
-            </a>
-        </div>
-        <div class="bio">MOB Grip</div>
-    </div>
-
-    <div class="banner">
-        <div class="profile-picture">
-            <a href="https://www.rictawheels.com" target="_blank">
-            <img src="Ricta-Wheels-Logo_2-2.svg" alt="Ricta Wheels">
-            </a>
-        </div>
-        <div class="bio">Ricta Wheels</div>
-    </div>
-    <div class="banner">
-        <div class="profile-picture">
-            <a href="https://www.creatureskateboards.com" target="_blank">
-                <img src="Creature-Logo_2.svg" alt="Creature Skateboards">
-            </a>
-        </div>
-        <div class="bio">Creature Skateboards</div>
-    </div>
-    <div class="banner">
-        <div class="profile-picture">
-            <a href="https://www.slimeballwheels.com" target="_blank">
-            <img src="Slime-Balls-Logo_2.svg" alt="Slime Balls">
-            </a>
-        </div>
-        <div class="bio">Slime Balls</div>
-    </div>
-
-    <div class="banner">
-        <div class="profile-picture">
-            <img src="Bullet-Logo_2.svg" alt="Bullet">
-        </div>
-        <div class="bio">Bullet</div>
-    </div>
-
-    <div class="banner">
-        <div class="profile-picture">
-            <img src="norcal.png" alt="Nor Cal">
-        </div>
-        <div class="bio">Nor Cal</div>
-    </div>
+        toggleButton.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent default link behavior
+            if (toggleContent.style.display === 'none') {
+                toggleContent.style.display = 'block'; // Show content
+            } else {
+                toggleContent.style.display = 'none'; // Hide content
+            }
+        });
+    </script>
 
     <script>
         // Matrix Effect Script
