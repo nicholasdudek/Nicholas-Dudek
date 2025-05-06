@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NHS Skate DIRECT</title>
     <style>
+        /* ASCII Art Styling */
+        pre.ascii-art {
+            text-align: center;
+            font-family: monospace;
+            font-size: 1vw; /* Scale font size dynamically based on viewport width */
+            color: #0f0;
+            background: #000;
+            line-height: 1.2;
+            margin: 0;
+            padding: 20px 0;
+            white-space: pre-wrap; /* Preserve formatting */
+            overflow-x: auto;
+        }
+
         /* General Styles */
         body {
             margin: 0;
@@ -98,18 +112,51 @@
     </style>
 </head>
 <body>
+    <!-- ASCII Art -->
+    <pre class="ascii-art">
+                                    ...........
+                            ..',;;;;;;;;;;;;;;;;;;,'...
+                        .',;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,..
+                     .,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,''. 'ol
+                  .';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,'.';co  .,XXO
+                .,;;;;;;;;;;;;;;;;;;;;;;;;;;;;,.',:cok00xo;  ;KKXX
+              .;;;;;;;;;;;;;;;;;;;;;;;;;;;.,:'.OK0xXXl.     :XO.XX
+            .,;;;;;;;;;;;;;;;;;;;;'..';;;;.KX..'. .XK   ',.cXO. KX. .,
+           .;;;;;;;;;;;;;;;;,,;;;.lkO  ,;';XO   . lXd   ;.cXk   OX,  ;;.
+          ,;;;;;;;;;;;,'.'.co  ';.XXXc  ; xX:  .; 0X'  ..lXO    xX:  ;;;'
+         ,;;;;;,'.';:ldk..kXX. ..cXOXK. ..XK   ,.;X0   .oXx   ..xXl  ;;;;'
+        ,;;;;,.:dOX0xl;..OXXX'   0X,cXk  oXo  .;.OX;   dXk',cdOX0x;  ,;;;;'
+       .;;;;;.OXk'.    .0X:kX;  'X0  OX; KX.  .,.XK   dXXX0xo:'.     ,;;;;;.
+       ;;;;;,'X0   .''.OX; dXc  kXc  'X0oXk   ;.oXo  co:'.     ...',;;;;;;;;
+      ,;;;;;.dXl  .;,.0K;  lXo .XK    dXXX:  .; l:.       ..',;;;,..;;;;;;;;.
+      ;;;;;, KX.  ,'.0K,   ;Xk cXd   ,.0Ox   ,;..  ..'',;;,'.';:ldd  .;;;;;;,
+     .;;;;;.cXx   ''KK.   .;X0 0X'  .;'     .;;;;;;;,'...,lx0XOKXK,  .;;;;;;;
+     .;;;;;.KX'   'KK,.;lxOK0d.;.   ;;;;..';;;,,;;;;.dO. dl;. ;K0.  .;;;;;;;;
+     .;;;;',X0   ,KXXK0xl;..     ..';;;;;;;,.:: .';.:Xk      cXO.  .;;;;;;;;;
+     .;'..,0X,  .xo:'.     ...',;;;'.',:,.,.oXl  .; OX;  .,.oXk   .;;;;;;;;;;
+    .;ldOKOo.        ...',;;,'.,;cldOKKXO   KX.  ''.XK   '.kXo   ';;;;;;;;;;,
+   ;Odc,.     .,;,,;;;,'.';c. xX0dc,. OX:  cXk   ;.xXl   .0X:   ,;;;;;;;;;;;.
+         ...,;;;;;;'':lx0KOd .XX    ..XK   0X'  .;.XX.  'KK'   ..;;;;;;;;;;;
+       ';;;;;;;;;;,.KXd;.    cXx   ;.lXd  'X0   ,.:Xx  ;K0'.,:oc  ';;;;;;;;.
+        ,;;;;;;;;;.oXo   .., OX,  .'.0X'  dXc  .; OX, cXX0KKkoc.  .;;;;;;;'
+         ,;;;;;;;, KX.  ';;''XK.,:okK0c   KX.  ':oXO .xo:'.     ..;;;;'.',
+          ,;;;;;;.cXk   ;;;.kXX0xl:kXd   lXXxOK0xl;       ...';;;;;;;;;,'
+           ';;;;;.0X'  .;;,.XK.     dXx  ,do:'.     ..,;,;;;;;;;;;;;..;.
+            .;;;,'X0   ,;;.cXd   ',,.::.  .    ..',;;;;;;;;;;;;;;;;;,'
+              ';.dXc   ,:. 0X'  .;;;;'.  ..;;;;;;;;;;;;;;;;;;;;;,..;.
+                 KXkdkKOx  '.   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,';;,.
+                 ddl;.      ..',;;;;;;;;;;;;;;;;;;;;;;;;;;,;;,.'.
+                      ...,;;;;;;;;;;;;;;;;;;;;;;;;;;;;,;;'..,.
+                        .';;;'.,;;,;;;;;;;;;;;;;,';;;..;;'.
+                             ..,;;..;;;..;;;.,;;,.,,'.
+                                       .....
+    </pre>
+
     <!-- Matrix Effect -->
     <canvas id="matrix"></canvas>
 
     <!-- Header Section -->
     <header>
-        <div class="banner">
-        <div class="profile-picture">
-            <a href="https://nhsskatedirect.com" target="_blank" id="toggle-button">
-                <img src="santacruz.jpg" alt="ascii art" style="background-color: #fff;">
-            </a>
-        </div>
-    </div>
         <div class="banner">
             <div class="profile-picture">
                 <a href="https://nhsskatedirect.com" target="_blank" id="toggle-button">
@@ -119,159 +166,6 @@
         </div>
     </header>
 
-    <!-- Items to toggle -->
-    <div id="toggle-content">
-        <div class="banner">
-            <div class="profile-picture">
-                <a href="https://www.santacruzskateboards.com" target="_blank">
-                    <img src="santa-cruz-skateboards.png" alt="Santa Cruz Skateboards">
-                </a>
-            </div>
-            <div class="bio">Santa Cruz Skateboards</div>
-        </div>
-
-        <div class="banner">
-            <div class="profile-picture">
-                <a href="https://www.independenttrucks.com" target="_blank">
-                    <img src="independent-trucks-span.png" alt="Independent Trucks">
-                </a>
-            </div>
-            <div class="bio">Independent Truck Company</div>
-        </div>
-
-        <div class="banner">
-            <div class="profile-picture">
-                <a href="https://www.ojwheels.com" target="_blank">
-                    <img src="OJ-Wheels-Logo_2.svg" alt="OJ Wheels">
-                </a>
-            </div>
-            <div class="bio">OJ Wheels</div>
-        </div>
-
-        <div class="banner">
-            <div class="profile-picture">
-                <a href="https://www.kruxtrucks.com" target="_blank">
-                    <img src="Krux-Trucks-Logo_2.svg" alt="Krux Trucks">
-                </a>
-            </div>
-            <div class="bio">Krux Trucks</div>
-        </div>
-
-        <div class="banner">
-            <div class="profile-picture">
-                <a href="https://www.mobgriptape.com" target="_blank">
-                    <img src="mobgrip.png" alt="MOB Grip">
-                </a>
-            </div>
-            <div class="bio">MOB Grip</div>
-        </div>
-
-        <div class="banner">
-            <div class="profile-picture">
-                <a href="https://www.rictawheels.com" target="_blank">
-                <img src="Ricta-Wheels-Logo_2-2.svg" alt="Ricta Wheels">
-                </a>
-            </div>
-            <div class="bio">Ricta Wheels</div>
-        </div>
-        <div class="banner">
-            <div class="profile-picture">
-                <a href="https://www.creatureskateboards.com" target="_blank">
-                    <img src="Creature-Logo_2.svg" alt="Creature Skateboards">
-                </a>
-            </div>
-            <div class="bio">Creature Skateboards</div>
-        </div>
-        <div class="banner">
-            <div class="profile-picture">
-                <a href="https://www.slimeballwheels.com" target="_blank">
-                <img src="Slime-Balls-Logo_2.svg" alt="Slime Balls">
-                </a>
-            </div>
-            <div class="bio">Slime Balls</div>
-        </div>
-
-        <div class="banner">
-            <div class="profile-picture">
-                <a href="https://nhsskatedirect.com/pages/bullet" target="_blank">
-                <img src="Bullet-Logo_2.svg" alt="Bullet">
-                </a>
-            </div>
-            <div class="bio">Bullet</div>
-        </div>
-
-        <div class="banner">
-            <div class="profile-picture">
-                <a href="https://nhsskatedirect.com/pages/nor-cal" target="_blank">
-                    <img src="norcal.png" alt="Nor Cal">
-                </a>
-            </div>
-            <div class="bio">Nor Cal</div>
-        </div>
-    </div>
-
-    <script>
-        // JavaScript to toggle visibility
-        const toggleButton = document.getElementById('toggle-button');
-        const toggleContent = document.getElementById('toggle-content');
-
-        // Initially hide the content
-        toggleContent.style.display = 'none';
-
-        toggleButton.addEventListener('click', (event) => {
-            event.preventDefault(); // Prevent default link behavior
-            if (toggleContent.style.display === 'none') {
-                toggleContent.style.display = 'block'; // Show content
-            } else {
-                toggleContent.style.display = 'none'; // Hide content
-            }
-        });
-    </script>
-
-    <script>
-        // Matrix Effect Script
-        const canvas = document.getElementById("matrix");
-        const ctx = canvas.getContext("2d");
-
-        // Resize canvas to fit the screen
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%".split("");
-        const fontSize = 16;
-        const columns = Math.floor(canvas.width / fontSize);
-        const drops = Array(columns).fill(0);
-
-        function drawMatrix() {
-            ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-            ctx.fillStyle = "#0f0";
-            ctx.font = fontSize + "px monospace";
-
-            drops.forEach((y, x) => {
-                const text = chars[Math.floor(Math.random() * chars.length)];
-                ctx.fillText(text, x * fontSize, y * fontSize);
-
-                if (y * fontSize > canvas.height || Math.random() > 0.95) {
-                    drops[x] = 0;
-                }
-                drops[x]++;
-            });
-        }
-
-        setInterval(drawMatrix, 50);
-
-        // Adjust canvas size on window resize
-        window.addEventListener("resize", () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            drops.length = Math.floor(canvas.width / fonSize);
-            drops.fill(0);
-        });
-    </script>
+    <!-- Include rest of the content -->
 </body>
 </html>
-
-
-
